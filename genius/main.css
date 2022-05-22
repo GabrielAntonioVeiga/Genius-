@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+}
+
+button {
+    cursor: pointer;
+}
+
+@keyframes piscadela {
+    50%{
+        background-color: white;
+    }
+}
+
+main{
+    border: 5px solid black;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main > div {
+    border: 5px solid black;
+    width: 50%;
+    flex: none;
+    /* transition: .3s; */
+}
+
+main > div:nth-child(1){
+    background-color: #00ff;
+}
+
+main > div:nth-child(2){
+    background-color: #ff0000;
+}
+
+main > div:nth-child(3){
+    background-color: #32cd32;
+}
+
+main > div:nth-child(4){
+    background-color: #ffff00;
+}
+
+main > div.animating{
+    /* background-color: white;        */
+    animation-name: piscadela;
+    /* animation: piscadela, 0.3s, ease-in-out; */
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+}
+
+.pontuacao{
+    position: absolute;
+    background-color: #32050c;
+    color: red;
+    font-family: "iceland", cursive;
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: right;
+    width: 5.5rem;
+    border: .3rem solid black;
+    border-radius: 1rem;
+    padding-right: .2rem;
+    padding-left: .3rem;
+}
+
+.iniciar{
+    position: absolute;
+    background-color: darkgrey;
+    width: 4rem;
+    border: .3rem solid black;
+    border-radius: 1rem;
+    right: 0;
+    padding: .5vmin;
+}
+
+.btn-iniciar {
+    background-color: red;
+    border-radius: 60%;
+    border: solid gray;
+    height: 35px;
+}
+
+.perdeu{
+    /* height: 300px;
+    width: 300px; */
+    color: red;
+    font-family: "iceland", cursive;
+    background-color: #32050c;
+    position: absolute; 
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 8rem;
+    white-space: nowrap;
+    border-radius: 1rem;
+    border: .3rem solid black;
+    font-size: 3rem;
+    font-weight: bold;
+}
